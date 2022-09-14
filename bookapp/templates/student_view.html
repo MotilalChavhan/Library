@@ -9,7 +9,7 @@
     <h1>Books List</h1>
     <ul>
         {% for book in books %}
-            <li>{{ book.book_title }} added by {{ book.user.username }}</li>
+            <li>{{ book.book_title }} <b>added by</b> {{ book.user.username }}</li>
         {% endfor %}
     </ul>
     <h6><a href="{% url 'account_login' %}">Sign In?</a></h6>
