@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookApp Admin</title>
+</head>
+<body>
+    <form action="{% url 'create' %}" method="post">
+        {% csrf_token %}
+        <input placeholder="Book Title" type="text" name="book_title"/>
+        <input placeholder="Author" type="text" name="author"/>
+        <input placeholder="Book Description" type="text" name="book_description" size="25"/>
+        <input placeholder="ISBN" type="text" name="isbn"/>
+        <input placeholder="Pages" type="text" name="pages"/>
+        <input type="submit">
+    </form>
+    <a href="{% url 'account_logout' %}">Logout</a>
+</body>
+</html>

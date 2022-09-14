@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+</head>
+<body>
+    <h1>Books List</h1>
+    <ul>
+        {% for book in books %}
+            <li>{{ book.book_title }} added by {{ book.user.username }}</li>
+        {% endfor %}
+    </ul>
+    <h6><a href="{% url 'account_login' %}">Sign In?</a></h6>
+</body>
+</html>
